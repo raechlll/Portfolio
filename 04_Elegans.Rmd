@@ -1,0 +1,10 @@
+---
+title: "C. elegans plate experiment"
+author: "Rachel Breuer"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r elegans, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
