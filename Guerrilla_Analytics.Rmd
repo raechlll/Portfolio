@@ -1,0 +1,5 @@
+```{r, echo=FALSE, fig.height=3, out.width= '100%', fig.cap="**_Fig. 2**"}
+# het inladen van de genomen fotos van de quality checks 
+img1 <-  rasterGrob(as.raster(readPNG("~/Rstudio/dsfb2_workflow_portfolio/Portfolio/Eind-tree.png")))
+grid.arrange(img1, ncol=2, top=textGrob("Per base quality distribution (left) and per sequence quality scores (right) reads", gp=gpar(fontsize=10,font=14)))
+``
