@@ -8,3 +8,9 @@ output: html_document
 ```{r elegans, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+```{r excel, echo=FALSE}
+library(readxl)
+CE_LIQ_FLOW_062_Tidydata <- read_excel("CE.LIQ.FLOW.062_Tidydata.xlsx")
+View(CE_LIQ_FLOW_062_Tidydata)
+```
