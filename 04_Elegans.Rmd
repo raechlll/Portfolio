@@ -6,11 +6,29 @@ output: html_document
 ---
 
 ```{r elegans, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
 ```
 
 ```{r excel, echo=FALSE}
 library(readxl)
 CE_LIQ_FLOW_062_Tidydata <- read_excel("CE.LIQ.FLOW.062_Tidydata.xlsx")
-View(CE_LIQ_FLOW_062_Tidydata)
+CE_LIQ_FLOW_062_Tidydata
+```
+
+```{r plot, echo=FALSE, message = FALSE}
+library(ggplot2)
+library(dplyr)
+elegans <- CE_LIQ_FLOW_062_Tidydata
+
+# compConcentration to numeric
+elegans$compConcentration <- as.numeric(as.character(elegans$compConcentration))
+
+# scatterplot
+elegans_plot <- ggplot(data = elegans, aes(x = log10(compConcentration), y = RawData, color = compName, shape = expType)) +
+geom_jitter(alpha = 0.5, show.legend = TRUE, position = position_jitter(width = 0.2, seed = 0)) +
+  scale_color_manual(values = c("orange","purple","cyan4","red", "blue")) +
+  theme_minimal() +
+  labs( x = "Concentration of the compound",
+       y = "Number of offspring counted as an integer value", shape = "Experimental type", color = "Compound name") 
+elegans_plot
 ```
