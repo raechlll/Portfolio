@@ -1,0 +1,19 @@
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+![Figuur 1: Folder tree RNA-sequence. De folder tree van RNA-sequence uit DAUR2 is gebaseerd op de Guerrilla Analytics Principle. ](RNA-tree.png)
+
+
+
+![Figuur 2: Folder tree Metagenomics. De folder tree van Metagenomics uit DAUR2 is gebaseerd op de Guerrilla Analytics Principle. ](Meta-tree.png)
+
+
+
+
+![Figuur 3: Folder tree ONECUT1. De folder tree van ONECUT1 uit de eindopdracht van DAUR2 is gebaseerd op de Guerrilla Analytics Principle. ](Eind-tree.png) 
+
+
+

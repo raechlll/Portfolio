@@ -24,7 +24,7 @@ elegans <- CE_LIQ_FLOW_062_Tidydata
 elegans$compConcentration <- as.numeric(as.character(elegans$compConcentration))
 
 # scatterplot
-elegans_plot <- ggplot(data = elegans, aes(x = log10(compConcentration), y = RawData, color = compName, shape = expType)) +
+elegans_plot <- ggplot(data = elegans, aes(x = log10(compConcentration + 0.01), y = RawData, color = compName, shape = expType)) +
 geom_jitter(alpha = 0.5, show.legend = TRUE, position = position_jitter(width = 0.2, seed = 0)) +
   scale_color_manual(values = c("orange","purple","cyan4","red", "blue")) +
   theme_minimal() +
