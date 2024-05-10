@@ -76,5 +76,4 @@ geom_point(position = position_jitter(width = 0.1, height = 0.1), alpha = 0.5, s
        y = "Normalized Data", shape = "Experimental type", color = "Compound name") 
 ```
 
-
 Voor de dataset CE_LIQ_FLOW_062_Tidydata werd de controleNegative conditie genormaliseerd, zodat de gemiddelde waarde van controleNegative gelijk is aan 1 en alle waarden worden uitgedrukt als een fractie daarvan. Hierdoor worden de gegevens gestandaardiseerd en wordt het interpreteren en vergelijken van de effecten van verschillende condities gemakkelijker.
